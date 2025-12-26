@@ -22,13 +22,13 @@ public class MaxDiameter_543 {
      * @param root
      * @return
      */
-    private static int diameter = 0;
-    private static int maxDiameter(TreeNode root) {
+    private  int diameter = 0;
+    private  int maxDiameter(TreeNode root) {
         maxDepth(root);
         return diameter;
     }
     
-    private static int maxDepth(TreeNode root) {
+    private  int maxDepth(TreeNode root) {
         if (root == null) {
             return 0;
         }
@@ -43,7 +43,7 @@ public class MaxDiameter_543 {
      * @param root
      * @return
      */
-    private static int maxDiameterTraversal(TreeNode root) {
+    private  int maxDiameterTraversal(TreeNode root) {
         if (root == null) {
             return 0;
         }
@@ -68,7 +68,7 @@ public class MaxDiameter_543 {
     }
     
 
-    public static void main(String[] args) {
+    public  void main(String[] args) {
         
     }
 }

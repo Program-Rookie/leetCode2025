@@ -11,7 +11,7 @@ import java.util.*;
  */
 public class MaxDepth_104 {
     
-    private static int maxDepthBFS(TreeNode root) {
+    private  int maxDepthBFS(TreeNode root) {
         // dfs
         if (root == null) {
             return 0;
@@ -20,7 +20,7 @@ public class MaxDepth_104 {
         return Math.max(maxDepthBFS(root.left), maxDepthBFS(root.right)) + 1;
     }
     
-    private static int maxDepthBFSQueue(TreeNode root) {
+    private  int maxDepthBFSQueue(TreeNode root) {
         // 层序遍历
         int level = 0;
         Queue<TreeNode> queue = new LinkedList<>();
@@ -41,7 +41,7 @@ public class MaxDepth_104 {
         return level;
     }
     
-    private static int maxDepthBFSStack(TreeNode root) {
+    private  int maxDepthBFSStack(TreeNode root) {
         if (root == null) {
             return 0;
         }

@@ -11,7 +11,7 @@ import java.util.Stack;
  */
 public class ReverseTree_226 {
 
-    private static TreeNode reverseTree(TreeNode root) {
+    private  TreeNode reverseTree(TreeNode root) {
         if (root == null) {
             return null;
         }
@@ -25,7 +25,7 @@ public class ReverseTree_226 {
         return root;
     }
     
-    private static TreeNode reverseTreeByStack(TreeNode root) {
+    private  TreeNode reverseTreeByStack(TreeNode root) {
         // 前序遍历翻转
         Stack<TreeNode> stack = new Stack<>();
         stack.push(root);

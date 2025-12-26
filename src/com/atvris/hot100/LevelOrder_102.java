@@ -14,7 +14,7 @@ import java.util.Queue;
  */
 public class LevelOrder_102 {
     
-    private static List<List<Integer>> levelOrder(TreeNode root) {
+    private List<List<Integer>> levelOrder(TreeNode root) {
         if (root == null) {
             return new ArrayList<>();
         }
@@ -43,6 +43,6 @@ public class LevelOrder_102 {
         TreeNode right = new TreeNode(20, new TreeNode(15), new TreeNode(7));
         TreeNode left = new TreeNode(9);
         TreeNode root = new TreeNode(3, left, right);
-        System.out.println(levelOrder(root));
+        System.out.println(new LevelOrder_102().levelOrder(root));
     }
 }

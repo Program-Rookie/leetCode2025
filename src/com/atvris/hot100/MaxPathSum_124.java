@@ -9,14 +9,14 @@ import com.atvris.TreeNode;
  */
 public class MaxPathSum_124 {
 
-    private static int maxSum = 0;
-    public static int maxPathSum(TreeNode root) {
+    private  int maxSum = 0;
+    public  int maxPathSum(TreeNode root) {
         // 讲贡献
         maxGain(root);
         return maxSum;
     }
 
-    private static int maxGain(TreeNode root) {
+    private  int maxGain(TreeNode root) {
         if (root == null) {
             return 0;
         }

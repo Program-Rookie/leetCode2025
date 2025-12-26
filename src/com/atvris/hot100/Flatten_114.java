@@ -13,7 +13,7 @@ import java.util.Stack;
  */
 public class Flatten_114 {
     
-    private static void flatten(TreeNode root) {
+    private  void flatten(TreeNode root) {
         // 与先序遍历相同，要求左子树始终为null，右子树指向下一个节点
         // 如果某个节点存在右子树，那它的右子树必然会挂在某个左子树的节点上
         List<TreeNode> treeNodes = new ArrayList<>();
@@ -25,7 +25,7 @@ public class Flatten_114 {
         }
     }
     
-    private static void preorder(TreeNode root, List<TreeNode> res) {
+    private  void preorder(TreeNode root, List<TreeNode> res) {
         if (root == null) {
             return;
         }
@@ -34,7 +34,7 @@ public class Flatten_114 {
         preorder(root.right, res);
     }
     
-    private static void flattenByStack(TreeNode root) {
+    private  void flattenByStack(TreeNode root) {
         // 这种在先序遍历的基础上需要记住上一次遍历的节点，因为需要让其右子树指向本次遍历的节点
         // 除此之外不需要额外空间，在栈遍历过程中执行操作即可
         if (root == null) {
@@ -60,7 +60,7 @@ public class Flatten_114 {
         }
     }
     
-    private static void flattenByCur(TreeNode root) {
+    private  void flattenByCur(TreeNode root) {
         // 要原地修改。在前序遍历过程中，
         // 如果当前节点左子树为空，该节点不需要做展开
         // 否则要将左子树中最后一个访问的节点的右子树指向当前节点右子树的第一个节点
@@ -82,7 +82,7 @@ public class Flatten_114 {
     }
     
 
-    public static void main(String[] args) {
+    public  void main(String[] args) {
         
     }
 }

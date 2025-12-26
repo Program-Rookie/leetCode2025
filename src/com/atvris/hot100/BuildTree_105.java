@@ -15,7 +15,7 @@ public class BuildTree_105 {
     // 9 3 15 20 7
     
     // 3 9 20 null null 15 7
-    public static TreeNode buildTree(int[] preorder, int[] inorder) {
+    public  TreeNode buildTree(int[] preorder, int[] inorder) {
         Map<Integer, Integer> inIndexMap = new HashMap<>();
         for(int i = 0; i < preorder.length; i++) {
             inIndexMap.put(inorder[i], i);
@@ -25,7 +25,7 @@ public class BuildTree_105 {
 
     }
 
-    private static TreeNode myBuildTree(int[] preorder, int[] inorder, int preleft, int preright, int inleft, int inright, Map<Integer, Integer> inIndexMap) {
+    private  TreeNode myBuildTree(int[] preorder, int[] inorder, int preleft, int preright, int inleft, int inright, Map<Integer, Integer> inIndexMap) {
         if (preleft > preright) {
             return null;
         }

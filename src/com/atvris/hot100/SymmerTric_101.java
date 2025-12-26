@@ -34,7 +34,7 @@ public class SymmerTric_101 {
         return false;
     }
     
-    private static boolean isSymmerTricBFSStack(TreeNode root) {
+    private  boolean isSymmerTricBFSStack(TreeNode root) {
         if (root == null) {
             return true;
         }
@@ -62,7 +62,7 @@ public class SymmerTric_101 {
         return true;
     }
 
-    private static boolean isSymmerTricBFSQueue(TreeNode root) {
+    private  boolean isSymmerTricBFSQueue(TreeNode root) {
         if (root == null) {
             return true;
         }

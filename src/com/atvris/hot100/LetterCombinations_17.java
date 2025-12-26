@@ -12,8 +12,8 @@ import java.util.Map;
  */
 public class LetterCombinations_17 {
 
-    static Map<Integer, String> characterMap = new HashMap<>();
-    static {
+     Map<Integer, String> characterMap = new HashMap<>();
+     {
         characterMap.put(2, "abc");
         characterMap.put(3, "def");
         characterMap.put(4, "ghi");

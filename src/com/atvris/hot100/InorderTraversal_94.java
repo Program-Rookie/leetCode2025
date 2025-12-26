@@ -13,13 +13,13 @@ import java.util.Stack;
  */
 public class InorderTraversal_94 {
 
-    private static List<Integer> inorderTraversal(TreeNode root) {
+    private List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> result = new ArrayList<>();
         inorder(root, result);
         return result;
     }
     
-    private static void inorder(TreeNode root, List<Integer> result) {
+    private void inorder(TreeNode root, List<Integer> result) {
         if (root == null) {
             return;
         }
@@ -28,7 +28,7 @@ public class InorderTraversal_94 {
         inorder(root.right, result);
     }
     
-    private static List<Integer> inorderTraversalV2(TreeNode root) {
+    private List<Integer> inorderTraversalV2(TreeNode root) {
         List<Integer> result = new ArrayList<>();
         if (root == null) {
             return result;
@@ -60,7 +60,7 @@ public class InorderTraversal_94 {
     }
     
     // 第三种方法 颜色标记法
-    private static List<Integer> inorderTraversalV3(TreeNode root) {
+    private List<Integer> inorderTraversalV3(TreeNode root) {
         List<Integer> result = new ArrayList<>();
         if (root == null) {
             return result;
@@ -84,6 +84,6 @@ public class InorderTraversal_94 {
     }
     public static void main(String[] args) {
         TreeNode root = new TreeNode(1, null, new TreeNode(2, new TreeNode(3), null));
-        System.out.println(inorderTraversalV2(root));
+        System.out.println(new InorderTraversal_94().inorderTraversalV2(root));
     }
 }

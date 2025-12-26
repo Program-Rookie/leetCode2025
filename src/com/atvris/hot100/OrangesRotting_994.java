@@ -17,7 +17,7 @@ public class OrangesRotting_994 {
      */
     // DFS，把腐烂的橘子放在队列里，每轮把腐烂的橘子依次取出来，腐化附件的橘子后把这一轮新腐烂的橘子再放回去
     // 直到队列为空，或者新鲜橘子都已腐烂（注意因为有空格子存在，新鲜橘子不一定被腐化）
-    public static int orangesRotting(int[][] grid) {
+    public  int orangesRotting(int[][] grid) {
         int newOrangeCount = 0;
         int m = grid.length, n = grid[0].length;
         Queue<Integer> queue = new LinkedList<>();

@@ -16,7 +16,7 @@ public class NumIslands_200 {
     /**
      * 第一种自己的笨办法，深度优先遍历
      */
-    public static int numIslands(char[][] grid) {
+    public  int numIslands(char[][] grid) {
         int m = grid.length, n = grid[0].length;
         boolean[][] visited = new boolean[m][n];
         int res = 0;
@@ -31,7 +31,7 @@ public class NumIslands_200 {
         return res;
     }
 
-    private static boolean dfs(int i, int j, char[][] grid, boolean[][] visited) {
+    private  boolean dfs(int i, int j, char[][] grid, boolean[][] visited) {
         if (i < 0 || j < 0 || i >= grid.length || j >= grid[0].length) {
             return false;
         }
@@ -49,7 +49,7 @@ public class NumIslands_200 {
         return false;
     }
     
-    static class UnionS {
+    class UnionS {
         int[] parent; // 记录父节点
         
         public UnionS(char[][] grid) {
@@ -88,7 +88,7 @@ public class NumIslands_200 {
     }
     
     // 并查集，官解改了原数组，自己想一种解法
-    public static int numIslandsV2(char[][] grid) {
+    public  int numIslandsV2(char[][] grid) {
         int m = grid.length, n = grid[0].length;
         UnionS unionS = new UnionS(grid);
         for (int i = 0; i < m; i++) {
@@ -107,7 +107,7 @@ public class NumIslands_200 {
         return allCount;
     }
     
-    private static void union(int i, int j, char[][] grid, UnionS unionS) {
+    private  void union(int i, int j, char[][] grid, UnionS unionS) {
         int m = grid.length;
         int n = grid[0].length;
         // 只需要向右或向下遍历

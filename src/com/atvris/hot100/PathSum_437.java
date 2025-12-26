@@ -18,7 +18,7 @@ public class PathSum_437 {
     // 如果加进去，后续路径上的节点都得加进去 -> rootSum
     // 如果不加进去，看子任务 -> pathSum
     // 注意targetSum的数据类型为long，避免边界问题
-    public static int pathSum(TreeNode root, long targetSum) {
+    public  int pathSum(TreeNode root, long targetSum) {
         if(root == null) {
             return 0;
         }
@@ -30,7 +30,7 @@ public class PathSum_437 {
 
     }
 
-    private static int rootSum(TreeNode root, long targetSum) {
+    private  int rootSum(TreeNode root, long targetSum) {
         int res = 0;
         if (root == null) {
             return 0;

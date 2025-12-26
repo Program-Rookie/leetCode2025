@@ -11,7 +11,7 @@ import java.util.*;
  */
 public class LowestCommonAncestor_236 {
     
-    private static TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+    private  TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         // 正着找：从根节点开始的路径的最后一个相同的节点
         // 逆着找：从节点到根，路径上第一个相同的祖先
         // 考虑遍历二叉树的时候记住各个节点的父节点，遍历完从p、q开始找父节点
@@ -31,7 +31,7 @@ public class LowestCommonAncestor_236 {
         }
         return root;
     }
-    private static void dfs(TreeNode root, Map<TreeNode, TreeNode> parentMap) {
+    private  void dfs(TreeNode root, Map<TreeNode, TreeNode> parentMap) {
         if (root == null) {
             return;
         }
@@ -46,13 +46,13 @@ public class LowestCommonAncestor_236 {
     }
     
     // 方法2，后序遍历判断p、q在不在当前子树中，如果p在左（右）子树中、q在右（左）子树中，则认为是祖先节点
-    private static TreeNode lowestCommonAncestorV2(TreeNode root, TreeNode p, TreeNode q) {
+    private  TreeNode lowestCommonAncestorV2(TreeNode root, TreeNode p, TreeNode q) {
         return postorder(root, p, q);
     }
     
     // 上头了，非得用stack方式解，必须增加visitedmap
     // 然后因为遍历过程中不好区分到底包含q还是p，又增加了个nodeStatusmap
-    private static TreeNode postorder(TreeNode root, TreeNode p, TreeNode q) {
+    private  TreeNode postorder(TreeNode root, TreeNode p, TreeNode q) {
         Stack<TreeNode> stack = new Stack<>();
         Map<TreeNode, Boolean> hasVisitedMap = new HashMap<>();
         // 1包含p、2包含q、3 包含p、q
@@ -92,15 +92,15 @@ public class LowestCommonAncestor_236 {
         return root;
     }
 
-    private static TreeNode ans = null;
+    private  TreeNode ans = null;
 
     // 这次是递归解法，想想怎么找到p或q
-    private static TreeNode lowestCommonAncestorV3(TreeNode root, TreeNode p, TreeNode q) {
+    private  TreeNode lowestCommonAncestorV3(TreeNode root, TreeNode p, TreeNode q) {
         dfsV2(root, p, q);
         return ans;
     }
     // 要避免ans作为参数传进来，java是值传递
-    private static boolean dfsV2(TreeNode root, TreeNode p, TreeNode q) {
+    private  boolean dfsV2(TreeNode root, TreeNode p, TreeNode q) {
         if (root == null) {
             return false;
         }

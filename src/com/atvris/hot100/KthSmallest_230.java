@@ -13,14 +13,14 @@ import java.util.Stack;
  */
 public class KthSmallest_230 {
 
-    private static int kthSmallest(TreeNode root, int k) {
+    private  int kthSmallest(TreeNode root, int k) {
         // 中序遍历中的第K个元素，还原出中序遍历即可
         List<Integer> res = new ArrayList<>();
         inorder(root, res);
         return res.get(k - 1); // 下标对应k -1
     }
     
-    private static void inorder(TreeNode root, List<Integer> res) {
+    private  void inorder(TreeNode root, List<Integer> res) {
         if (root == null) {
             return;
         }
@@ -29,7 +29,7 @@ public class KthSmallest_230 {
         inorder(root.right, res);
     }
 
-    private static int kthSmallestByStack(TreeNode root, int k) {
+    private  int kthSmallestByStack(TreeNode root, int k) {
         if (root == null) {
             return 0;
         }
@@ -52,7 +52,7 @@ public class KthSmallest_230 {
     
     // TODO AVL方式
     
-    public static void main(String[] args) {
+    public  void main(String[] args) {
         
     }
 }

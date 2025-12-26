@@ -11,7 +11,7 @@ import java.util.*;
  */
 public class RightSideView_199 {
 
-    public static List<Integer> rightSideView(TreeNode root) {
+    public  List<Integer> rightSideView(TreeNode root) {
         // 每一层上最后一个节点
         List<Integer> result = new ArrayList<>();
         if (root == null) {
@@ -37,14 +37,14 @@ public class RightSideView_199 {
         return result;
     }
     
-    private static List<Integer> rightSizeViewDFS(TreeNode root) {
+    private  List<Integer> rightSizeViewDFS(TreeNode root) {
         // 深度优先遍历时，优先遍历右子树，当遍历到第一个该层元素时认为是目标元素之一
         List<Integer> result = new ArrayList<>();
         dfs(root, result, 0);
         return result;
     }
     
-    private static void dfs(TreeNode root, List<Integer> result, int level) {
+    private  void dfs(TreeNode root, List<Integer> result, int level) {
         if (root == null) {
             return;
         }
@@ -55,7 +55,7 @@ public class RightSideView_199 {
         dfs(root.left, result, level + 1);
     }
     
-    static class Node {
+     class Node {
         private TreeNode node;
         private int depth;
         
@@ -65,7 +65,7 @@ public class RightSideView_199 {
         }
     }
     
-    private static List<Integer> rightSideViewByStack(TreeNode root) {
+    private  List<Integer> rightSideViewByStack(TreeNode root) {
         List<Integer> result = new ArrayList<>();
         if (root == null) {
             return result;
@@ -90,7 +90,7 @@ public class RightSideView_199 {
         return result;
     }
     
-    public static void main(String[] args) {
+    public  void main(String[] args) {
         
     }
 }
