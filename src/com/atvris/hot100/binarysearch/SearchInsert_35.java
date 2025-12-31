@@ -1,4 +1,4 @@
-package com.atvris.hot100;
+package com.atvris.hot100.binarysearch;
 
 /**
  * 二分法，专注于这两种写法即可
