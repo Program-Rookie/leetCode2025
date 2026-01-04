@@ -13,6 +13,11 @@ import java.util.Map;
  */
 public class LengthOfLongestSubstring_3 {
 
+    /**
+     * 时间复杂度O(n) 空间复杂度O(n)
+     * @param s
+     * @return
+     */
     public int lengthOfLongestSubstring(String s) {
         // 滑动窗口+hash
         Deque<Character> deque = new LinkedList<>();
